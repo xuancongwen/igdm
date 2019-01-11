@@ -30,7 +30,7 @@ const guessUsername = () => {
     }
   }
   return username;
-}
+};
 
 const getCookieStorage = (filePath) => {
   let storage;
@@ -47,7 +47,7 @@ const getCookieStorage = (filePath) => {
   }
 
   return storage;
-}
+};
 
 const clearCookieFiles = () => {
   // delete all session storage
@@ -63,9 +63,9 @@ const getDevice = (username) => {
   username = username || guessUsername();
   if (username) device = new Client.Device(username);
   return device;
-}
+};
 
 module.exports = {
   canUseFileStorage, guessUsername,
-  getCookieStorage, clearCookieFiles, getDevice
-}
+  getCookieStorage, clearCookieFiles, getDevice,
+};

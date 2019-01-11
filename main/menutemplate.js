@@ -34,32 +34,7 @@ const template = [
       {role: 'close'}
     ]
   },
-  {
-    role: 'help',
-    submenu: [
-      {
-        label: 'Learn More',
-        click () { openExternal('http://igdm.me') }
-      },
-      {
-        label: 'Report an issue',
-        click () { openExternal('https://github.com/ifedapoolarewaju/igdm/issues/new') }
-      },
-      {
-        label: 'Star this project (Show us some love. 🙂)',
-        click () { openExternal('https://github.com/ifedapoolarewaju/igdm/stargazers') }
-      },
-      {
-        label: 'Donate to this Project',
-        click() { openExternal('http://paypal.me/SolomonOmojola') }
-      },
-      {
-        label: 'Try IGdm Pro',
-        click() { openExternal('https://pro.igdm.me') }
-      }
-    ]
-  }
-]
+];
 
 if (process.platform === 'darwin') {
   template.unshift({
@@ -75,27 +50,13 @@ if (process.platform === 'darwin') {
       {type: 'separator'},
       {role: 'quit'}
     ]
-  })
-
-  // Edit menu
-  template[1].submenu.push(
-    {type: 'separator'},
-    {
-      label: 'Speech',
-      submenu: [
-        {role: 'startspeaking'},
-        {role: 'stopspeaking'}
-      ]
-    }
-  )
+  });
 
   // Window menu
   template[3].submenu = [
     {role: 'close'},
     {role: 'minimize'},
-    {role: 'zoom'},
     {type: 'separator'},
-    {role: 'front'}
   ]
 }
 
