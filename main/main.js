@@ -6,7 +6,6 @@ const BrowserWindow = electron.BrowserWindow;
 const path = require('path');
 const url = require('url');
 const instagram = require('./instagram');
-const autoUpdater = require('./autoupdater');
 
 // fixes electron's timeout inconsistency
 // not doing this on windows because the fix doesn't work for windows.
@@ -128,7 +127,6 @@ app.on('ready', () => {
     const menu = Menu.buildFromTemplate(menuTemplate);
     Menu.setApplicationMenu(menu);
   }
-  autoUpdater.init();
 });
 
 app.on('window-all-closed', () => {
